@@ -37,15 +37,22 @@ Pascal’s Triangle builds row by row:
 5. Row 5 → Previous row `[1, 3, 3, 1]` → middle elements = `1+3=4`, `3+3=6`, `3+1=4` → `[1, 4, 6, 4, 1]`
 
 ---
+# Pascal's Triangle — Java 8 Solution
+
+## Problem Statement
+Given an integer `numRows`, return the first `numRows` of Pascal's triangle.
+
+In Pascal's triangle, each number is the sum of the two numbers directly above it.
+
+---
 
 ## Java 8 Code
 
-```java
 import java.util.ArrayList;
 import java.util.List;
 
-public class PascalsTriangle {
-    public static List<List<Integer>> generate(int numRows) {
+class Solution {
+    public List<List<Integer>> generate(int numRows) {
         List<List<Integer>> triangle = new ArrayList<>();
 
         // Base case: first row is always [1]
@@ -76,21 +83,12 @@ public class PascalsTriangle {
 
     // Demo
     public static void main(String[] args) {
+        Solution sol = new Solution();
         int numRows = 5;
-        List<List<Integer>> result = generate(numRows);
+        List<List<Integer>> result = sol.generate(numRows);
         System.out.println(result);
     }
 }
-```
-
----
-
-## Output for `numRows = 5`
-```
-[[1], [1, 1], [1, 2, 1], [1, 3, 3, 1], [1, 4, 6, 4, 1]]
-```
-
----
 
 ## Complexity Analysis
 - **Time Complexity:** `O(numRows²)` — each row is built element by element.  
