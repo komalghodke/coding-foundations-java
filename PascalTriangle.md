@@ -90,6 +90,7 @@ class Solution {
     }
 }
 
+
 ## Complexity Analysis
 - **Time Complexity:** `O(numRows²)` — each row is built element by element.  
 - **Space Complexity:** `O(numRows²)` — we store all rows in a list.
