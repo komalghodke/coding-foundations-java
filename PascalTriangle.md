@@ -54,7 +54,6 @@ import java.util.List;
 class Solution {
     public List<List<Integer>> generate(int numRows) {
         List<List<Integer>> triangle = new ArrayList<>();
-
         // Base case: first row is always [1]
         triangle.add(new ArrayList<>());
         triangle.get(0).add(1);
